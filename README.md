@@ -3,7 +3,7 @@
   <img height="80px" src="https://uploads-ssl.webflow.com/6290be8d112ee934eeb6aaf2/64745d685739d23f87bf7ec1_android-chrome-256x256.png"/>
   </a>
   <br>
-  Your gateway to Software 3.0: AI agents that automate your software development.
+  Automate software development with AI Agents
 </p>
 <br>
 
@@ -70,7 +70,11 @@ fine start [agent-name] -s [path to your project's specifications]
 You can also use the Fine's Command Palette to run the agent.
 
 
-# Get in touch
+## Build your own Agent
+For more information on how to use Fine and build your own agents, check out the [Fine documentation](https://docs.fine.dev/).
+
+
+## Get in touch
 
 Join our active [Discord community]([https://](https://discord.gg/nxW8sA5yqe), where you ask questions, share experiences, and can engage in discussions about Fine or Software 3.0 ideas.
 
