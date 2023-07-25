@@ -1,7 +1,8 @@
 <p align=center>
+    <a href="https://fine.dev">
   <img height="80px" src="https://uploads-ssl.webflow.com/6290be8d112ee934eeb6aaf2/64745d685739d23f87bf7ec1_android-chrome-256x256.png"/>
-</p>
-<p align=center>
+  </a>
+  <br>
   Your gateway to Software 3.0: AI agents that automate your software development.
 </p>
 <br>
