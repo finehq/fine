@@ -13,11 +13,13 @@ The Tiptap Extension Expert is an AI agent designed specifically for automating 
 
 To get started, install the fine-dev cli on your device by running `npm i -g @fine-dev/cli`.
 
-If you don't have an account on [Fine](thisis.fine.dev) yet, no worries! Just run `npx fine-dev login` and follow the instructions.
+If you don't have an account on [Fine](https://thisis.fine.dev), start by running `npx fine-dev login` and follow the instructions.
 
 ### Deploy
 
-Running an agent requires deploying it to your workspace first. Do this by running `npx fine-dev deploy -p [PATH_TO_YAML]`.
+Running an agent requires deploying it to your workspace first. Do this, run the following command:
+
+ `npx fine-dev deploy -p [PATH_TO_YAML]`
 
 Got a success message? You're read to roll 🏎️
 
@@ -38,7 +40,7 @@ To use the Tiptap Extension Expert, you will need a specification for it to use.
    
   2. Next, Run `npx fine-dev start tiptap-extension-expert -s [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
 
-### Agent Steps
+## Agent Steps
 
 The Tiptap Extension Expert will go through the following steps while running:
 
