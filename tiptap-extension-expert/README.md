@@ -6,20 +6,19 @@ _...enter the Tiptap Extension Expert! 🎉_
 
 The Tiptap Extension Expert is an AI agent designed specifically for automating the process of generating and updating Tiptap extensions in your project. Extensions are generated based on your project's specifications, using resources that _you_ provide for the task. It might not be the magic pill you were looking for 💊, but this lovely agent will bring you a couple of steps further in your quest for the perfect editor.
 
-
 ## Setup
 
 > Already used our agents before? You can skip straight to the next section 🏃‍♂️
 
 To get started, install the fine-dev cli on your device by running `npm i -g @fine-dev/cli`.
 
-If you don't have an account on [Fine](https://thisis.fine.dev), start by running `npx fine-dev login` and follow the instructions.
+If you don't have an account on [Fine](https://thisis.fine.dev), start by running `fine-dev login` and follow the instructions.
 
 ### Deploy
 
-Running an agent requires deploying it to your workspace first. Do this, run the following command:
+Running an agent requires deploying it to your workspace first. To do this, run the following command:
 
- `npx fine-dev deploy -p [PATH_TO_YAML]`
+`fine-dev deploy -p [PATH_TO_YAML]`
 
 Got a success message? You're read to roll 🏎️
 
@@ -27,18 +26,17 @@ Got a success message? You're read to roll 🏎️
 
 To use the Tiptap Extension Expert, you will need a specification for it to use. There are two ways to provide a specification:
 
-### Run from your Fine workspace
+#### Run from your Fine workspace
 
-  1. Run `npx fine-dev proxy` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
-   
-  2. Next, go to your [Fine workspace](https://thisis.fine.dev) and enter the specification you will be using. Hit `Ctrl+P` (or `⌘+P` on ios), type `Tiptap`, and wrap it up by hitting `⏎`. The agent should now be up and running 🚀
+1. Run `fine-dev proxy` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
 
+2. Next, go to your [Fine workspace](https://thisis.fine.dev) and enter the specification you will be using. Hit `Ctrl+P` (or `⌘+P` on ios), type `Tiptap`, and wrap it up by hitting `⏎`. The agent should now be up and running 🚀
 
-### Run from the CLI
+#### Run from the CLI
 
-  1. Create a markdown file and write the specification for your Tiptap extension project inside it.
-   
-  2. Next, Run `npx fine-dev start tiptap-extension-expert -s [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
+1. Create a markdown file and write the specification for your Tiptap extension project inside it.
+
+2. Next, Run `fine-dev start tiptap-extension-expert -s [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
 
 ## Agent Steps
 
