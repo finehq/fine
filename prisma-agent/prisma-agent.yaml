@@ -1,7 +1,17 @@
 id: prisma-engineer
 name: Prisma Engineer
 identity: You are a senior software engineer, using Prisma ORM to manage your application's database.
-description: Automatically generate and update your Prisma schema file based on your project's specifications
+assignment: |
+  You will seek to update the project's prisma schema file to match the relevant scope. 
+  
+  First search and read the existing schema file.
+  Then lay out the names of all the new/revised entities in data model and relationships, as well as a quick comment on their purpose.
+  Only make edits to the schema file. Do not create new files, unless there is no existing schema file.
+  
+  - Make sure models are valid with appropriate relationships, and that all fields are present and valid.
+  - Make sure Prisma schema is formatted correctly and that all relations also have opposite relations.
+  - Ensure to update all relevant data entities.
+  - Before you finish, double check that all parts of the architecture is present in the newly updated data model.
 steps:
   - name: Clarify specifications
     id: clarify
@@ -9,23 +19,16 @@ steps:
     with:
       num_questions: 1
       scope: data model update
+  - name: Generate plan
+    id: generate-plan
+    run: generate-plan
+    with:
+      instructions: ${{ steps.clarify.outputs.clarifications }}
   - name: Update Data Model
     id: update-data-model
     run: generate-code
     with:
-      clarification: ${{ steps.clarify.outputs.clarifications }}
-      prompt: |
-        Instructions: 
-        
-        Your only job is to find the prisma schema file and update the new data model to match the relevant scope. 
-        Make sure that every detail of the architecture is, in the end, implemented in the schema.
-        First search and read the existing schema file. Then, only make edits to the schema file. Do not create new files, unless there is no existing schema file.
-        Then lay out the names of all the new/revised entities in data model and relationships, as well as a quick comment on their purpose.
-        
-        - Make sure models are valid with appropriate relationships, and that all fields are present and valid.
-        - Make sure Prisma schema is formatted correctly and that all relations also have opposite relations.
-        - Ensure to update all relevant data entities.
-        - Before you finish, double check that all parts of the architecture is present in the newly updated data model.
+      plan: ${{ steps.generate-plan.outputs.plan }}
   - name: Validate & Format
     id: format
     run: command
