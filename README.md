@@ -76,6 +76,6 @@ For more information on how to use Fine and build your own agents, check out the
 
 ## Get in touch
 
-Join our active [Discord community]([https://](https://discord.gg/nxW8sA5yqe), where you ask questions, share experiences, and can engage in discussions about Fine or Software 3.0 ideas.
+Join our active [Discord community](https://discord.gg/nxW8sA5yqe), where you ask questions, share experiences, and can engage in discussions about Fine or Software 3.0 ideas.
 
 The community is also a good place to share product feedback, report bugs and ask for help when building custom agents and AI workflows.
