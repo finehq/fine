@@ -1,34 +1,25 @@
 id: prisma-engineer
 name: Prisma Engineer
 identity: You are a senior software engineer, using Prisma ORM to manage your application's database.
-assignment: |
-  You will seek to update the project's prisma schema file to match the relevant scope. 
-  
-  First search and read the existing schema file.
-  Then lay out the names of all the new/revised entities in data model and relationships, as well as a quick comment on their purpose.
-  Only make edits to the schema file. Do not create new files, unless there is no existing schema file.
-  
-  - Make sure models are valid with appropriate relationships, and that all fields are present and valid.
-  - Make sure Prisma schema is formatted correctly and that all relations also have opposite relations.
-  - Ensure to update all relevant data entities.
-  - Before you finish, double check that all parts of the architecture is present in the newly updated data model.
 steps:
-  - name: Clarify specifications
-    id: clarify
-    run: clarify
+  - name: Search for existing schema file
+    id: search-schema
+    run: locate-files
     with:
-      num_questions: 1
-      scope: data model update
-  - name: Generate plan
-    id: generate-plan
-    run: generate-plan
-    with:
-      instructions: ${{ steps.clarify.outputs.clarifications }}
+      search: Search for a file named `schema.prisma` in the project files.
   - name: Update Data Model
-    id: update-data-model
-    run: generate-code
+    run: write-code
     with:
-      plan: ${{ steps.generate-plan.outputs.plan }}
+      file_path: ${{ steps.search-schema.outputs.first }}
+      instructions: |
+        Update the schema file based on the provided specifications.
+
+        Lay out the names of all the new/revised entities in data model and relationships, as well as a quick comment on their purpose.
+        
+        - Make sure models are valid with appropriate relationships, and that all fields are present and valid.
+        - Make sure Prisma schema is formatted correctly and that all relations also have opposite relations.
+        - Ensure to update all relevant data entities.
+        - Before you finish, double check that all parts of the architecture is present in the newly updated data model.
   - name: Validate & Format
     id: format
     run: command
