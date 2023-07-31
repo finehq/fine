@@ -1,42 +1,34 @@
 id: tiptap-extension-expert
 name: TipTap Extension Expert
 identity: You are a senior frontend engineer, specialized in creating beautiful rich-text editing experiences with TipTap and Prosemirror
-assignment: |
-  Your job is to create or update a TipTap extension, or several extensions, based on the specification provided.
-  For new extensions, create only a single file (per extension) containing all necessary types and methods.
-  For existing extensions, make modifications only to their own files, without touching other parts of the code.
-  If you can find the existing editor instance, you may also modify the file containing it to match the latest extension updates.
-
-  TipTap extensions can either extend an existing extension type (e.g. `BulletList`) or an abstract extension type (e.g. `Node`).
-  Make sure to stick to the TipTap way of creating extensions, e.g. `Node.create({...})` and not by extending the `Node` class.
-  You can use the following example - TipTap's bold extension - for reference:
-  `import{Mark,markInputRule,markPasteRule,mergeAttributes}from'@tiptap/core';export interface BoldOptions{HTMLAttributes:Record<string,any>}declare module'@tiptap/core'{interface Commands<ReturnType>{bold:{setBold:()=>ReturnType,toggleBold:()=>ReturnType,unsetBold:()=>ReturnType}}}export const starInputRegex=/(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/;export const starPasteRegex=/(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/g;export const underscoreInputRegex=/(?:^|\s)((?:__)((?:[^__]+))(?:__))$/;export const underscorePasteRegex=/(?:^|\s)((?:__)((?:[^__]+))(?:__))/g;export const Bold=Mark.create<BoldOptions>({name:'bold',addOptions(){return{HTMLAttributes:{}}},parseHTML(){return[{tag:'strong'},{tag:'b',getAttrs:node=>(node as HTMLElement).style.fontWeight!=='normal'&&null},{style:'font-weight',getAttrs:value=>/^(bold(er)?|[5-9]\d{2,})$/.test(value as string)&&null}]},renderHTML({HTMLAttributes}){return['strong',mergeAttributes(this.options.HTMLAttributes,HTMLAttributes),0]},addCommands(){return{setBold:()=>({commands})=>{return commands.setMark(this.name)},toggleBold:()=>({commands})=>{return commands.toggleMark(this.name)},unsetBold:()=>({commands})=>{return commands.unsetMark(this.name)}}},addKeyboardShortcuts(){return{'Mod-b':()=>this.editor.commands.toggleBold(),'Mod-B':()=>this.editor.commands.toggleBold()}},addInputRules(){return[markInputRule({find:starInputRegex,type:this.type}),markInputRule({find:underscoreInputRegex,type:this.type})]},addPasteRules(){return[markPasteRule({find:starPasteRegex,type:this.type}),markPasteRule({find:underscorePasteRegex,type:this.type})]}})`
-
-  TipTap extensions use prosemirror plugins under the hood (with `addProsemirrorPlugins`).
-  To make things simple, try to stick as much as possible with the prosemirror plugin API.
-  In cases where TipTap's abstractions can simplify things, try to use them instead.
-  Note: To be able to reference the extension instance as `this` from within prosemirror plugins, make sure that all methods are defined as arrow functions.
-
-  If the specification references existing extensions - make sure to take them into account.
-  In any case, look for existings extensions in the provided resources and use them as a reference.
+tools:
+  - type: resource
+    name: TipTap
+    description: |
+      TipTap is a headless, highly customizable, and extendable rich-text editor based on Prosemirror.
+    url: https://github.com/ueberdosis/tiptap.git
 steps:
-  - name: Generate TipTap Extension
-    id: generate-tasks
-    run: generate-plan
-  - name: Generate Code
+  - name: Create extension
     run: generate-code
     with:
-      plan:
-        ${{ steps.generate-tasks.outputs.plan }}
-        # - action: create
-        #   file_path: /src/components/Editor/extensions/ResourceLink.ts
-        #   summary: Create a new extension file `ResourceLink.tsx` in the `extensions` directory. This extension will be based on TipTap's link extension and will handle the creation of resource nodes instead of link nodes when a link is pasted into an empty selection or typed into the notebook.
-        # - action: update
-        #   file_path: /src/components/Editor/index.tsx
-        #   summary: Update the editor instance in `index.tsx` to include the new `ResourceLink` extension. This will allow the editor to use the functionality provided by the new extension.
-        # - action: update
-        #   file_path: /src/components/Editor/extensions/Resource.ts
-        #   summary: Update the `Resource` extension to handle the creation of resource nodes at the end of the currently selected node. This is necessary to fulfill the requirement that resource nodes should not be created in-place, but rather at the end of the currently selected node.
       instructions: |
+        Your job is to create or update a TipTap extension, or several extensions, based on the specification provided.
+        For new extensions, create only a single file (per extension) containing all necessary types and methods.
+        For existing extensions, make modifications only to their own files, without touching other parts of the code.
+        If you can find the existing editor instance, you may also modify the file containing it to match the latest extension updates.
+
+        TipTap extensions can either extend an existing extension type (e.g. `BulletList`) or an abstract extension type (e.g. `Node`).
+        Make sure to stick to the TipTap way of creating extensions, e.g. `Node.create({...})` and not by extending the `Node` class.
+        You can use the following example - TipTap's bold extension - for reference:
+        `import{Mark,markInputRule,markPasteRule,mergeAttributes}from'@tiptap/core';export interface BoldOptions{HTMLAttributes:Record<string,any>}declare module'@tiptap/core'{interface Commands<ReturnType>{bold:{setBold:()=>ReturnType,toggleBold:()=>ReturnType,unsetBold:()=>ReturnType}}}export const starInputRegex=/(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))$/;export const starPasteRegex=/(?:^|\s)((?:\*\*)((?:[^*]+))(?:\*\*))/g;export const underscoreInputRegex=/(?:^|\s)((?:__)((?:[^__]+))(?:__))$/;export const underscorePasteRegex=/(?:^|\s)((?:__)((?:[^__]+))(?:__))/g;export const Bold=Mark.create<BoldOptions>({name:'bold',addOptions(){return{HTMLAttributes:{}}},parseHTML(){return[{tag:'strong'},{tag:'b',getAttrs:node=>(node as HTMLElement).style.fontWeight!=='normal'&&null},{style:'font-weight',getAttrs:value=>/^(bold(er)?|[5-9]\d{2,})$/.test(value as string)&&null}]},renderHTML({HTMLAttributes}){return['strong',mergeAttributes(this.options.HTMLAttributes,HTMLAttributes),0]},addCommands(){return{setBold:()=>({commands})=>{return commands.setMark(this.name)},toggleBold:()=>({commands})=>{return commands.toggleMark(this.name)},unsetBold:()=>({commands})=>{return commands.unsetMark(this.name)}}},addKeyboardShortcuts(){return{'Mod-b':()=>this.editor.commands.toggleBold(),'Mod-B':()=>this.editor.commands.toggleBold()}},addInputRules(){return[markInputRule({find:starInputRegex,type:this.type}),markInputRule({find:underscoreInputRegex,type:this.type})]},addPasteRules(){return[markPasteRule({find:starPasteRegex,type:this.type}),markPasteRule({find:underscorePasteRegex,type:this.type})]}})`
+
+        TipTap extensions use prosemirror plugins under the hood (with `addProsemirrorPlugins`).
+        To make things simple, try to stick as much as possible with the prosemirror plugin API.
+        In cases where TipTap's abstractions can simplify things, try to use them instead.
+        Note: To be able to reference the extension instance as `this` from within prosemirror plugins, make sure that all methods are defined as arrow functions.
+
+        If the specification references existing extensions - make sure to take them into account.
+        In any case, look for existings extensions in the provided resources and use them as a reference.
+
         If the codebase is in typescript, make sure that you declare any new commands that have been added as per the BoldExtension example above.
         Be strict about this - also when creating a new extension file.
