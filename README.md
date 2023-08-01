@@ -22,26 +22,14 @@
             alt="follow on Twitter"></a>
 </p> 
 <p align="center">
-<a href="https://cursor.so/">
-<img src="https://user-images.githubusercontent.com/4297743/235380904-b2efe56f-4e73-4d6b-82dd-98b414f53687.png" width="800"><br>
+<a href="https://www.fine.dev/">
+<img src="https://github.com/finehq/agent-examples/assets/119014147/85f4a895-8377-45bf-840d-ed58decd012a">
+<br>
 </a>
 </p>
 
-
 This repository contains a number of ready-to-run example agents that you can use to automate your software development workflow.
 Pick an example and follow the instructions in the corresponding README.
-
-## Why is Fine awesome
-Fine lets you build and deploy custom AI Agents that can carry out various coding tasks for you and automate a great deal of your development workflows. Agents can generate boilerplate code, update your database schema, generate typings, manage APIs, and much more.
-
-### Use cases
-
-Agents can help you with a variety of tasks, including:
-
-- **Automating repetitive tasks**: Certain tasks, like setting up a new project or adding common functionalities, follow the same pattern. Fine Agents can automate these, saving you time and effort.
-- **Ensuring code quality and consistency**: Fine Agents can generate code following best practices, ensuring high quality and consistency across your codebase.
-- **Running migrations**: Fine Agents can help you modernize your codebase to a new framework or library, or to a new version of an existing framework or library.
-
 
 ## Get started
 
@@ -85,6 +73,18 @@ You can also use the Fine's Command Palette to run the agent.
 
 ## Build your own Agent
 For more information on how to use Fine and build your own agents, check out the [Fine documentation](https://docs.fine.dev/).
+
+
+## Why Fine is awesome
+Fine lets you build and deploy custom AI Agents that can carry out various coding tasks for you and automate a great deal of your development workflows. Agents can generate boilerplate code, update your database schema, generate typings, manage APIs, and much more.
+
+### Use cases
+
+Agents can help you with a variety of tasks, including:
+
+- **Automating repetitive tasks**: Certain tasks, like setting up a new project or adding common functionalities, follow the same pattern. Fine Agents can automate these, saving you time and effort.
+- **Ensuring code quality and consistency**: Fine Agents can generate code following best practices, ensuring high quality and consistency across your codebase.
+- **Running migrations**: Fine Agents can help you modernize your codebase to a new framework or library, or to a new version of an existing framework or library.
 
 
 ## Get in touch
