@@ -43,7 +43,7 @@ npm install -g fine-dev
 Next, create your Fine account by running the following command:
 
 ```
-fine login
+fine-dev login
 ```
 
 Follow the instructions to create your account.
@@ -54,7 +54,7 @@ To use an agent, you need to deploy it to your workspace.
 Run the following command to deploy the agent and make it available for use in your workspace:
 
 ```
-fine deploy -p [path to agent configuration file]
+fine-dev deploy -p [path to agent configuration file]
 ```
 
 Once the agent is deployed successfully, you can use it to automate your software development workflow.
@@ -65,7 +65,7 @@ To use an agent, navigate to your project directory and run the following comman
 
 
 ```
-fine start [agent-name] -s [path to your project's specifications]
+fine-dev start [agent-name] -s [path to your project's specifications]
 ```
 
 You can also use the Fine's Command Palette to run the agent.
