@@ -1,19 +1,32 @@
-<p align=center>
+<div align=center>
     <a href="https://fine.dev">
   <img height="80px" src="https://uploads-ssl.webflow.com/6290be8d112ee934eeb6aaf2/64745d685739d23f87bf7ec1_android-chrome-256x256.png"/>
   </a>
-  <br>
-  Automate software development with AI Agents
-</p>
+    <br>
+  <h1>Fine</h1>
+  <p>Automate software development with AI Agents</p>
+</div>
 <br>
-
-------
-
 <p align="center">
-  <a href="https://fine.dev">Fine</a> | <a href="https://docs.fine.dev">Docs</a>
+    <a href="https://thisis.fine.dev/">
+      <img src="https://img.shields.io/website?url=https://thisis.fine.dev/" 
+          alt="Website"></a>
+    <a href="https://docs.fine.dev/">
+        <img src="https://img.shields.io/badge/Docs-9654EB"
+            alt="Docs"></a>
+    <a href="https://discord.gg/nxW8sA5yqe">
+        <img src="https://img.shields.io/discord/308323056592486420?logo=discord"
+            alt="Discord"></a>
+    <a href="https://twitter.com/intent/follow?screen_name=thisisfinedev">
+        <img src="https://img.shields.io/twitter/follow/thisisfinedev?style=social&logo=twitter"
+            alt="follow on Twitter"></a>
+</p> 
+<p align="center">
+<a href="https://cursor.so/">
+<img src="https://user-images.githubusercontent.com/4297743/235380904-b2efe56f-4e73-4d6b-82dd-98b414f53687.png" width="800"><br>
+</a>
 </p>
 
-<br>
 
 This repository contains a number of ready-to-run example agents that you can use to automate your software development workflow.
 Pick an example and follow the instructions in the corresponding README.
