@@ -37,7 +37,7 @@ Pick an example and follow the instructions in the corresponding README.
 To get started with Fine, you need to install the Fine CLI tool. You can do this by running the following command:
 
 ```
-npm install -g fine-dev
+npm install -g @fine-dev/cli
 ```
 
 Next, create your Fine account by running the following command:
@@ -65,10 +65,10 @@ To use an agent, navigate to your project directory and run the following comman
 
 
 ```
-fine-dev start [agent-name] -s [path to your project's specifications]
+fine-dev start [agent-name] -p [path to your project's specifications]
 ```
 
-You can also use the Fine's Command Palette to run the agent.
+You can also use Fine's command palette (Cmd + P inside any notebook) to run the agent.
 
 
 ## Build your own Agent
@@ -76,7 +76,7 @@ For more information on how to use Fine and build your own agents, check out the
 
 
 ## Why Fine is awesome
-Fine lets you build and deploy custom AI Agents that can carry out various coding tasks for you and automate a great deal of your development workflows. Agents can generate boilerplate code, update your database schema, generate typings, manage APIs, and much more.
+Fine lets you build and deploy custom AI Agents that can carry out various coding tasks for you, and automate a great deal of your development workflows. Agents can generate boilerplate code, update your database schema, generate typings, manage APIs, and much more.
 
 ### Use cases
 
