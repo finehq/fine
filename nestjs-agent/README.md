@@ -1,6 +1,6 @@
-# NestJS Module Generator 🤖
+# NestJS Agent 🤖
 
-The NestJS Module Generator agent is an AI agent that specializes in generating new modules in NestJS applications according to given specifications.
+The NestJS agent specializes in generating new modules in NestJS applications according to given specifications.
 
 
 ## Setup
@@ -34,7 +34,7 @@ To use the NestJS Module Generator, you will need a specification for it to use.
 
   1. Create a markdown file and write the specification for your NestJS module inside it.
    
-  2. Next, Run `fine-dev start nestjs-module-generator -p [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
+  2. Next, Run `fine-dev start nestjs-agent -p [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
 
 ## Agent Steps
 

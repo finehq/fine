@@ -1,6 +1,6 @@
-# Terraform Engineer 🌐
+# Terraform Agent 🌐
 
-The Terraform Engineer agent is an AI agent that specializes in building and maintaining Terraform infrastructure code. It works with various cloud providers such as AWS, GCP, and Azure. 
+The Terraform agent specializes in building and maintaining Terraform infrastructure code. It works with various cloud providers such as AWS, GCP, and Azure. 
 
 ## Setup
 
@@ -33,7 +33,7 @@ To use the Terraform Engineer, you will need a specification for it to use. Ther
 
   1. Create a markdown file and write the specification for your Terraform project inside it.
    
-  2. Next, Run `fine-dev start terraform-engineer -s [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
+  2. Next, Run `fine-dev start terraform-agent -s [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
 
 ## Agent Steps
 

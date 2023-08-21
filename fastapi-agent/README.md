@@ -1,6 +1,6 @@
-# Python FastAPI Engineer 🤖
+# FastAPI Agent 🤖
 
-The Python FastAPI Engineer is an AI agent that excels in maintaining a Python FastAPI backend application. This agent can implement new API endpoints, write unit tests, and refactor code.
+The FastAPI agent excels in maintaining a Python FastAPI backend application. This agent can implement new API endpoints, write unit tests, and refactor code.
 
 ## Setup
 
@@ -30,7 +30,7 @@ To use the Python FastAPI Engineer, you will need to give it access to your Fast
 
 ### Run from the CLI
 
-Run `fine-dev start fastapi-engineer` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
+Run `fine-dev start fastapi-agent` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
 
 ## Agent Steps
 

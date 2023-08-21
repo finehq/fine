@@ -1,6 +1,6 @@
-# React Engineer 🤖
+# React Agent 🤖
 
-The React Engineer is an AI agent that specialized in writing and updating project using React. This agent can implement new components, as well as refactor existing components.
+The React agent specializes in writing and updating project using React. This agent can implement new components, as well as refactor existing components.
 
 ## Setup
 
@@ -30,7 +30,7 @@ To use the React Engineer, you will need to give it access to your FastAPI proje
 
 ### Run from the CLI
 
-Run `fine-dev start react-engineer` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
+Run `fine-dev start react-agent` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
 
 ## Agent Steps
 

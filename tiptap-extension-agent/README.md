@@ -1,4 +1,4 @@
-# Tiptap Extension Expert 🤖
+# Tiptap Extension Agent 🤖
 
 If you ever tried creating a plugin for [Prosemirror](https://prosemirror.net/), you know it's no easy task. [Tiptap](https://tiptap.dev/) has given us a wrapper for plugins in the form of extensions, which definitely makes our lives easier, but writing your own extension can still be quite a daunting task...
 
@@ -36,7 +36,7 @@ To use the Tiptap Extension Expert, you will need a specification for it to use.
 
 1. Create a markdown file and write the specification for your Tiptap extension project inside it.
 
-2. Next, Run `fine-dev start tiptap-extension-expert -s [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
+2. Next, Run `fine-dev start tiptap-extension-agent -s [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
 
 ## Agent Steps
 

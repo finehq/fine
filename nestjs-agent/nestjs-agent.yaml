@@ -1,4 +1,4 @@
-id: nestjs-module-generator
+id: nestjs-agent
 name: NestJS Module Generator
 identity: |
   You are a senior software engineer, building a NestJS backend application.

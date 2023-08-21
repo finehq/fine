@@ -1,4 +1,4 @@
-id: terraform-engineer
+id: terraform-agent
 name: Terraform Engineer
 description: |
   This agent specializes in developing and maintaining Terraform infrastructure code as per the provided specifications.

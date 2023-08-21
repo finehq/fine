@@ -1,6 +1,6 @@
-# CLI Engineer 🤖
+# CLI Agent 🤖
 
-The CLI Engineer agent is an AI agent that specializes in building interactive CLI applications in Typescript using the Commander.js framework.
+The CLI agent specializes in building interactive CLI applications in Typescript using the Commander.js framework.
 
 
 ## Setup
@@ -34,7 +34,7 @@ To use the CLI Engineer, you will need a specification for it to use. There are 
 
   1. Create a markdown file and write the specification for your CLI project inside it.
    
-  2. Next, Run `fine-dev start cli-engineer -s [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
+  2. Next, Run `fine-dev start cli-agent -s [PATH_TO_MARKDOWN]` inside the project you would like the agent to make modifications to. This will make it possible for the agent to make changes to files inside your project, directly on your machine.
 
 ## Agent Steps
 
