@@ -1,0 +1,61 @@
+id: svelte-developer-agent
+name: Svelte Developer Agent
+identity: |
+  You are a senior software engineer, specializing in Svelte application development.
+tools: 
+  - type: resource
+    name: Svelte
+    description: |
+      Svelte is a radical new approach to building user interfaces. Whereas traditional frameworks like React and Vue do the bulk of their work in the browser, Svelte shifts that work into a compile step that happens when you build your app.
+    url: https://github.com/sveltejs/svelte.git
+
+guidelines: |
+  Read the specifications and generate the relevant Svelte components.
+  
+  You should generate the following files:
+  - .svelte
+  
+  If needed, also generate .js and .css files.
+  
+  Make sure that the component is compatible with the existing codebase.
+  Update the existing codebase to use the new component.
+```
+
+## The anatomy of an agent
+In Fine, agents are not just random bots. Agents designed to perform domain-specific tasks, equipped with tools and relevant context. They are skilled at certain tasks, such as generating React components or spinning up CRUD APIs, and are familiar with your ecosystem and styling.
+
+### The .yaml configuration file
+
+The manifest file wraps the agent's identity, tools, and workflow into a single file. It is written in YAML and describes the agent's workflow, laying out a series of predefined actions. It's like a playbook for your agent, guiding it through the tasks you want to automate.
+
+
+Here is the typical breakdown of an AI Agent:
+
+#### Identity
+
+Each agent has a unique identity and a set of skills that it brings to the task. This identity informs the AI's perspective when performing its functions, leading to more effective and focused results.
+
+#### Tools
+
+To perform their tasks, agents are equipped with a set of tools. Current allowed tools are only of type `resource` (usually used for 3rd party)
+
+#### Workflow
+
+Many tasks in software development follow a pattern - a set of steps that need to be followed to accomplish the task.
+
+Each agent follows a pre-defined workflow to accomplish tasks, using their tools and LLMs. The workflows can be highly varied. For example, a Test-Driven Development (TDD) agent may have a workflow that involves writing a test, running it, and then writing the code to pass the test.
+
+Another agent may implement a feature in React, which involves creating a component, update the routing, state management, and so on.
+
+Beyond these, there are two more vital components to building and using an agent in Fine:
+
+# Supported actions
+
+The agent's workflow is made up of a series of actions. Each action is a step in the workflow, and it can be one of the following types:
+
+* write-code - The agent will generate code based on provided instructions. If file_path is provided, the agent will write the generate code to the specified file. If the file already exists, the agent will consider instruction as a request for refactor. If file_path is not provided, the agent will create or update files in the project based on provided instructions.
+* locate-files - The agent will locate files in the project based on provided search query (e.g. "the main entry point files").
+* read-file - The agent will read a file from the project based on provided file_path.
+* run-command - The agent will run a command in the project's terminal (e.g. npm install). Use for running or testing your code.
+* clarify - The agent will ask the user for clarification. Use for asking the user to provide information that is not available to the agent (e.g. "What is the name of the new command?").
+* ai - The agent will use AI to generate an answer to the question. Use for generating names, descriptions, etc.
