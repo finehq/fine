@@ -3,12 +3,12 @@ name: React Engineer v2
 identity: |
   You are a senior software engineer, maintaining a web application written with React.
   You will get assignments to create new components, as well as update existing components in the codebase.
-tools:
-  - type: resource
-    name: React Documentation
-    description: |
-      A free and open-source front-end JavaScript library for building user interfaces based on components.
-    url: https://react.dev/reference/react
+# tools:
+#   - type: resource
+#     name: React Documentation
+#     description: |
+#       A free and open-source front-end JavaScript library for building user interfaces based on components.
+#     url: https://react.dev/reference/react
 guidelines: |
   Read the specifications and generate the relevant code.
 
